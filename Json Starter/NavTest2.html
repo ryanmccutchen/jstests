@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- http://dhtmlexamples.com/2011/07/07/loading-json-files-using-jquery/ -->
+<html>
+<head>
+    <title>Loading JSON files using jQuery</title>
+</head>
+<body>
+ 
+    <ul id="list"></ul>
+ 
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $.getJSON("data.json", function(json){
+                $.each(json.sites, function(key, val) {
+                    $("<li><a href='http://" + val.href + "'>" + val.name + "</a></li>").appendTo("#list");
+                }); 
+            }); 
+        }); 
+    </script>
+ 
+</body>
+</html>
