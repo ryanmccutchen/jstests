@@ -2,3 +2,45 @@
 {
 	font-family: Arial;
 }
+li {
+	text-decoration: none;
+	list-style-type: none;
+}
+#fav-teams {
+	width: 400px;
+}
+#add-team {
+	display: inline-block;
+	padding: 7px;
+	width: 100%;
+	background-color: #ccc;
+}
+#add-team-left {
+	display: inline-block;
+	float: left;
+}
+#add-team-right {
+	display: inline-block;
+	float: right;
+}
+#team-select {
+	display: inline-block;
+	width: 20px;
+}
+#team-text {
+	display: inline-block;
+}
+#remove-team {
+	display: inline-block;
+	width: 100%;
+	padding: 7px;
+	background-color: #fafafa;
+}
+#remove-team-left {
+	display: inline-block;
+	float: left;
+}
+#remove-team-right {
+	display: inline-block;
+	float: right;
+}

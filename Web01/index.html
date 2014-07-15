@@ -11,13 +11,46 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/web01.css">
-	<script type="text/javascript" src="js/knockout-3.1.0.js"></script>
-	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	
 </head>
 <body>
 	
-	<h2 class="BodyText">Basic testing of different web crap</h2>
- 
+	<h1 class="BodyText">Basic testing of different web crap</h1>
+	<div id="fav-teams">
+		<p>
+		<h3>Please Enter Your Favorite Sports Team:</h3>
+		<div id="add-team">
+			<div id="add-team-left">
+				<input type="text" size="40" data-bind="value: teamToAdd, valueUpdate: 'afterKeyDown'" />
+			</div>	
+			<div id="add-team-right">
+				<button class="btn btn-primary" data-bind="click: addTeam">Add Team</button>
+			</div>
+		</div>
+		<ul class="list-group" data-bind="foreach:teams">
+			<li class="list-group-item">
+				<div id="team-select">
+					<input type="checkbox" data-bind="value: favTeam, checked: $parent.selectedTeams" />
+				</div>
+				<div id="team-text" data-bind="text: favTeam"></div>
+			</li>
+		</ul>
+		<div id="remove-team">
+			<div id="remove-team-left">
+				Select any team and click remove.
+			</div>
+			<div id="remove-team-right">
+				<button class="btn btn-primary" data-bind="click: removeTeams">Remove</button>
+			</div>
+		</div>
+		</p>
+	</div>
+	<!-- =============  CODE ======================= -->
+
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script> 
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/knockout-3.1.0.js"></script>
+    <script type="text/javascript" src="js/skunk.js"></script>
+
 </body>
 </html>
